@@ -74,7 +74,9 @@ def play_game():
         try:
             user_guess = int(input("Enter your guess: "))
             if user_guess == target_number:
-                print("Congratulations! You guessed the correct number.")
+                print(
+                    "Congratulations! You guessed the correct number. View your wallet!"
+                )
                 # Update user points in the database
                 cursor.execute(
                     "UPDATE users SET points = points + 1 WHERE username=?",
